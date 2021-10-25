@@ -43,7 +43,7 @@ customElements.define(
           (link.onclick = (e) => {
             e.preventDefault();
             dispatch(events.CHANGE_ROUTE, {
-              route: link.getAttribute("route"),
+              route: link.getAttribute("data-route"),
             });
           })
       );
@@ -52,7 +52,7 @@ customElements.define(
           (link.onclick = (e) => {
             e.preventDefault();
             dispatch(events.CHANGE_ROUTE, {
-              route: link.getAttribute("route"),
+              route: link.getAttribute("data-route"),
             });
           })
       );

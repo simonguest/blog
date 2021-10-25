@@ -118,6 +118,18 @@ describe("Navigation tests", () => {
     });
     assert(articles === 1, "Expected one article in page");
   });
+
+  it("should display the article after clicking on the article title", async () => {
+    await global.page.goto(buildUrl("/articles"));
+    await global.page.click("body > blog-router > blog-content > blog-summary:nth-child(1) > a.summary-title");
+    await global.page.waitForSelector("a#back-button");
+  });
+
+  it("should display the article after clicking on the read more link", async () => {
+    await global.page.goto(buildUrl("/articles"));
+    await global.page.click("body > blog-router > blog-content > blog-summary:nth-child(1) > a.summary-readmore");
+    await global.page.waitForSelector("a#back-button");
+  });
 });
 
 after(async function () {

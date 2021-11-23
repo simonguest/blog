@@ -1,4 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;700&family=Source+Serif+Pro&display=swap");
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../fonts/Arsenal-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../fonts/Arsenal-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../fonts/Arsenal-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 :root {
   --background-color: #ddd;
@@ -17,7 +35,7 @@ html {
   }
 
   nav {
-    padding-top: 1.5rem;
+    padding-top: 1.7rem;
   }
 }
 
@@ -46,8 +64,8 @@ blog-header {
 }
 
 #title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
+  font-family: "Arsenal", sans-serif;
+  font-size: 2.5rem;
   flex-grow: 4;
   padding-left: 0.5rem;
   padding-top: 0.5rem;
@@ -58,12 +76,13 @@ blog-header {
 }
 
 nav > blog-link {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Arsenal", sans-serif;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
   user-select: none;
   text-decoration: none;
+  padding-left: 0.3rem
 }
 
 nav > blog-link[selected] {
@@ -89,7 +108,7 @@ blog-summary {
 }
 
 .summary-title {
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
@@ -100,7 +119,7 @@ blog-summary {
 
 .summary-date {
   margin-top: 0.25rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-size: 1rem;
 }
 
@@ -109,12 +128,12 @@ blog-summary {
 }
 
 .summary-synopsis {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Arsenal", serif;
   font-size: 1rem;
 }
 
 .summary-readmore {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Arsenal", serif;
   font-size: 1rem;
   text-decoration: underline;
   cursor: pointer;
@@ -129,7 +148,7 @@ blog-article {
 }
 
 #article-title {
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 0;
@@ -137,24 +156,24 @@ blog-article {
 
 #article-date {
   margin-top: -1.25rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-size: 1rem;
 }
 
 #article-body {
-  font-family: "Source Serif Pro", serif;
-  font-size: 1rem;
+  font-family: "Arsenal", serif;
+  font-size: 1.0rem;
   flex: 1;
 }
 
 #article-body > h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-weight: bold;
   font-size: 1rem;
 }
 
 #article-body > h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   font-weight: bold;
   font-size: 0.7rem;
 }
@@ -169,7 +188,7 @@ pre {
 }
 
 #back-button {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Arsenal", serif;
   font-size: 1rem;
   text-decoration: underline;
   cursor: pointer;
@@ -180,7 +199,7 @@ blog-footer {
   display: flex;
   flex-flow: column;
   flex-grow: 1;
-  font-family: "Lato", sans-serif;
+  font-family: "Arsenal", sans-serif;
   margin-top: 2rem;
   padding-top: 2rem;
   text-align: center;

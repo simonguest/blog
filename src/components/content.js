@@ -27,8 +27,7 @@ customElements.define(
           month: "long",
           day: "numeric",
         });
-        this.innerHTML =
-          this.innerHTML +
+        this.innerHTML +=
           /*html*/
           `<blog-summary>
             <a slot="summary-title" data-route="${article.url}" class="summary-title" tabindex="0" role="link" href="#">${article.title}</a>
@@ -38,24 +37,6 @@ customElements.define(
            </blog-summary>
              `;
       });
-      this.querySelectorAll(".summary-title").forEach(
-        (link) =>
-          (link.onclick = (e) => {
-            e.preventDefault();
-            dispatch(events.CHANGE_ROUTE, {
-              route: link.getAttribute("data-route"),
-            });
-          })
-      );
-      this.querySelectorAll(".summary-readmore").forEach(
-        (link) =>
-          (link.onclick = (e) => {
-            e.preventDefault();
-            dispatch(events.CHANGE_ROUTE, {
-              route: link.getAttribute("data-route"),
-            });
-          })
-      );
     }
 
     async displayArticle(article, path) {

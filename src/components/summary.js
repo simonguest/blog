@@ -1,3 +1,5 @@
+import { dispatch, events } from "../eventbus.js";
+
 const template = document.createElement("template");
 template.innerHTML = /*html*/ `
       <slot name="summary-title">No Article Title</slot>
@@ -15,6 +17,23 @@ customElements.define(
       this.shadowRoot.append(template.content.cloneNode(true));
     }
 
-    connectedCallback() {}
+    connectedCallback() {
+      const title = this.querySelector('*[slot="summary-title"]');
+      const readmore = this.querySelector('*[slot="summary-readmore"]');
+
+      title.addEventListener("click", (e) => {
+        e.preventDefault();
+        dispatch(events.CHANGE_ROUTE, {
+          route: title.getAttribute("data-route")
+        });
+      });
+
+      readmore.addEventListener("click", (e) => {
+        e.preventDefault();
+        dispatch(events.CHANGE_ROUTE, {
+          route: title.getAttribute("data-route")
+        });
+      });
+    }
   }
 );

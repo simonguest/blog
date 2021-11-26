@@ -1,21 +1,4 @@
-@font-face {
-  font-family: 'Arsenal';
-  src: url('../fonts/Arsenal-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Arsenal';
-  src: url('../fonts/Arsenal-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Arsenal';
-  src: url('../fonts/Arsenal-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 :root {

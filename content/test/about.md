@@ -1,7 +1,5 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu gravida purus, et vulputate orci. Etiam porttitor quam lectus, id posuere sem lacinia at. Vestibulum non imperdiet turpis. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer rhoncus varius mi, sit amet mattis turpis laoreet vel. Phasellus tristique semper est. Cras tortor mauris, euismod semper vestibulum quis, sagittis sit amet dui. Ut porttitor luctus neque, sed laoreet orci convallis et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu condimentum justo. Aenean eleifend eget urna quis imperdiet.
+---
+---
+Simon Guest is the CTO at [Code.org](https://code.org), supporting the mission to ensure every student in every school has the opportunity to learn computer science.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu gravida purus, et vulputate orci. Etiam porttitor quam lectus, id posuere sem lacinia at. Vestibulum non imperdiet turpis. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer rhoncus varius mi, sit amet mattis turpis laoreet vel. **Phasellus tristique semper est.** Cras tortor mauris, euismod semper vestibulum quis, sagittis sit amet dui. Ut porttitor luctus neque, sed laoreet orci convallis et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu condimentum justo. Aenean eleifend eget urna quis imperdiet.
-
-> “This is wonderful!”
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu gravida purus, et vulputate orci. Etiam porttitor quam lectus, id posuere sem lacinia at. Vestibulum non imperdiet turpis. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer rhoncus varius mi, sit amet mattis turpis laoreet vel. Phasellus tristique semper est. 
+Prior to joining Code.org, Simon held software engineering leadership positions at Amazon, AWS, Concur, and Microsoft. He is an active contributor to multiple open source projects, and the author of several articles, patents, and books.

@@ -13,7 +13,9 @@
   "scripts": {
     "test": "npx cypress run",
     "generate": "node generate.js",
+    "prebuild": "npm run generate",
     "build": "npx parcel build index.html",
+    "preserver": "npm run build",
     "server": "node server.js"
   },
   "repository": {

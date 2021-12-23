@@ -7,9 +7,9 @@ class BlogCdkStack extends cdk.Stack {
     constructor(scope, id, props) {
         super(scope, id, props);
 
-        const bucket = new s3.Bucket(this, "MyFirstBucket", {
+        const bucket = new s3.Bucket(this, "simonguest.com", {
             versioned: true,
-            bucketName: "simonguest-my-first-bucket",
+            bucketName: "simonguest.com",
             websiteIndexDocument: "index.html",
             websiteErrorDocument: "index.html",
             removalPolicy: cdk.RemovalPolicy.DESTROY,

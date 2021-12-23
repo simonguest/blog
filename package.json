@@ -23,7 +23,8 @@
     "preserver": "npm run build",
     "server": "node server.js",
     "predeploy": "npm run build",
-    "deploy": "npx cdk deploy --app cdk-deploy.js --require-approval never"
+    "deploy": "npx cdk deploy --app cdk-deploy.js --require-approval never",
+    "undeploy": "npx cdk destroy --app cdk-deploy.js"
   },
   "repository": {
     "type": "git",

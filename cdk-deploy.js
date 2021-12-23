@@ -2,6 +2,7 @@ const cdk = require("@aws-cdk/core");
 const s3 = require("@aws-cdk/aws-s3");
 const s3deploy = require("@aws-cdk/aws-s3-deployment");
 const cloudfront = require("@aws-cdk/aws-cloudfront");
+const cm = require("@aws-cdk/aws-certificatemanager")
 
 class BlogCdkStack extends cdk.Stack {
     constructor(scope, id, props) {
@@ -21,15 +22,24 @@ class BlogCdkStack extends cdk.Stack {
             destinationBucket: bucket,
         });
 
+        const certificate = cm.Certificate.fromCertificateArn(
+            this,
+            process.env.CERTIFICATE_ID,
+            process.env.CERTIFICATE_ARN
+        );
+
         new cloudfront.CloudFrontWebDistribution(this, "CDKCRAStaticDistribution", {
             originConfigs: [
                 {
                     s3OriginSource: {
-                        s3BucketSource: bucket,
+                        s3BucketSource: bucket
                     },
                     behaviors: [{isDefaultBehavior: true}],
                 },
             ],
+            viewerCertificate: cloudfront.ViewerCertificate.fromAcmCertificate(
+                certificate, {aliases: ['simonguest.com', 'www.simonguest.com']}
+            ),
             errorConfigurations: [
                 {
                     errorCode: 403,

@@ -5,3 +5,5 @@ dist
 .parcel-cache
 cypress/downloads/**
 cypress/videos/**
+.envrc
+cdk.out

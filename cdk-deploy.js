@@ -38,7 +38,7 @@ class BlogCdkStack extends cdk.Stack {
                 },
             ],
             viewerCertificate: cloudfront.ViewerCertificate.fromAcmCertificate(
-                certificate, {aliases: ['simonguest.com', 'www.simonguest.com']}
+                certificate, {aliases: ['simonguest.com']}
             ),
             errorConfigurations: [
                 {

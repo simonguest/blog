@@ -17,18 +17,13 @@ class BlogCdkStack extends cdk.Stack {
             publicReadAccess: true,
         });
 
-        new s3deploy.BucketDeployment(this, "DeployWebsite", {
-            sources: [s3deploy.Source.asset("./dist")],
-            destinationBucket: bucket,
-        });
-
         const certificate = cm.Certificate.fromCertificateArn(
             this,
             process.env.CERTIFICATE_ID,
             process.env.CERTIFICATE_ARN
         );
 
-        new cloudfront.CloudFrontWebDistribution(this, "CDKCRAStaticDistribution", {
+        const distribution = new cloudfront.CloudFrontWebDistribution(this, "CDKCRAStaticDistribution", {
             originConfigs: [
                 {
                     s3OriginSource: {
@@ -52,6 +47,13 @@ class BlogCdkStack extends cdk.Stack {
                     responsePagePath: '/index.html'
                 }
             ],
+        });
+
+        new s3deploy.BucketDeployment(this, "DeployWebsite", {
+            sources: [s3deploy.Source.asset("./dist")],
+            destinationBucket: bucket,
+            distribution: distribution,
+            distributionPaths: ['/*']
         });
     }
 }

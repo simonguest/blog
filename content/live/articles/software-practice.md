@@ -1,6 +1,7 @@
 ---
 title: Why Don't Software Developers Practice?
 created: 5/28/2022
+updated: 5/29/2022
 synopsis: Many professions, such as athletes and musicians, incorporate practice into their daily routines, but software development is an exception to the rule. In this article, I explore why this is concerning and offer five steps for introducing practice into the profession.
 ---
 Many professions incorporate practice into their daily routines. Athletes wake up early to practice regularly. Successful musicians often have a strict routine of practice. And many artists will dedicate time to practicing new techniques they then incorporate into their work.
@@ -13,19 +14,19 @@ The concept of practice, however, holds so much potential for improving software
 
 What does it take to incorporate practice into software development? I'm sure there are many angles, but here are five steps I've found useful with my teams to develop a culture of practice:
 
-# Establish a North Star
+# What's your goal?
 
-The first step is to define a North Star. As a developer, what do you want to achieve from practice? Your North Star should be bold and should even feel a little intimidating just to say it aloud. It shouldn't be too bold that it's never achievable - but it shouldn't be something you can quickly accomplish in a couple of days either.
+The first step is to define a goal. As a developer, what do you want to achieve from practice? Your goal should be bold and should even feel a little intimidating just to say it aloud. It shouldn't be too bold that it's never achievable - but it shouldn't be something you can quickly accomplish in a couple of days either.
 
-To give an example, I recently wanted to learn the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API). I had no experience with doing anything audio-related in the browser, and given the size of the spec, it was a intimidating at first glance. It did, however, provide for a good North Star on which to focus my practice time.
+To give an example, I recently wanted to learn the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API). I had no experience with doing anything audio-related in the browser, and given the size of the spec, it was intimidating at first glance. It did, however, provide for a good goal for which to focus my practice time.
 
 # Work out one step at a time
 
-After establishing a North Star, it's important to work the first step on the journey. The key is not to figure out everything at once - you'll likely end up spending more time deconstructing the tasks vs. actually spending time in practice - just the next step in order to make progress. 
+After establishing a goal, it's important to work the first step on the journey. The key is not to figure out everything at once - you'll likely end up spending more time deconstructing the tasks vs. actually spending time in practice - just the next step in order to make progress. 
 
 Going back to my example of learning Web Audio, I decided the first step was to work out how to play a simple WAV file in the browser. That was the sole focus of my first practice session, and it was easy to know when I had accomplished it. After completing this, to figure out what I should do in my next practice session, I went back to the Web Audio spec and figured out that creating a simple oscillator would be a good next step.
 
-It's important to define one step at a time, and not to over-commit. Even though the North Star may be intimidating, practice shouldn't be a stretch goal. If it is, it will become stressful and you'll likely give up. I like to set a goal of 50%: If I have 90 minutes to practice, my next step should feel about 45 minutes’ worth of work, providing a healthy buffer as I figure things out. Plus, if I end early and accomplish something, I feel much better than running out of time, having over-committed.
+It's important to define one step at a time, and not to over-commit. Even though the goal may be intimidating, practice shouldn't be a stretch. If it is, it will become stressful and you'll likely give up. I like to set a goal of 50%: If I have 90 minutes to practice, my next step should feel about 45 minutes’ worth of work, providing a healthy buffer as I figure things out. Plus, if I end early and accomplish something, I feel much better than running out of time, having over-committed.
 
 # Create a feedback loop
 
@@ -67,5 +68,5 @@ Instead, focus on the learning experience. I guarantee that there will be a time
 
 # In closing
 
-I hope you find the above useful, and I hope more start incorporating the concept of practice into software development. If we do, I suspect it will add a lot to the profession, and make for more productive and happy developers.
+I hope you find the above useful, and more start incorporating the concept of practice into software development. If we do, I suspect it will add a lot to the profession, and make for more productive and happy developers.
 

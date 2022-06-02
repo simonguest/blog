@@ -24,14 +24,16 @@ customElements.define(
       title.addEventListener("click", (e) => {
         e.preventDefault();
         dispatch(events.CHANGE_ROUTE, {
-          route: title.getAttribute("data-route")
+          route: title.getAttribute("data-route"),
+            windowTitle: title.innerText
         });
       });
 
       readmore.addEventListener("click", (e) => {
         e.preventDefault();
         dispatch(events.CHANGE_ROUTE, {
-          route: title.getAttribute("data-route")
+          route: title.getAttribute("data-route"),
+            windowTitle: title.innerText
         });
       });
     }

@@ -112,17 +112,17 @@ customElements.define(
               (c) => c.url === event.detail.route.toString()
             );
             if (match) {
-              await this.displayArticle(match, event.detail.route.path);
               if (match.title){
                   document.title = `${match.title} - simonguest.com`;
               }
+              await this.displayArticle(match, event.detail.route.path);
             } else {
-              this.displaySummaries(content);
               document.title = 'simonguest.com';
+              this.displaySummaries(content);
             }
           } else {
-            this.displayNotFound();
             document.title = 'Page Not Found - simonguest.com';
+            this.displayNotFound();
           }
         },
         false

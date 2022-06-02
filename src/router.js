@@ -57,11 +57,6 @@ customElements.define(
             route: Route.parse(ev.detail.route),
           });
         }
-        if (ev.detail.windowTitle) {
-          document.title = `${ev.detail.windowTitle} - simonguest.com`;
-        } else {
-          document.title = 'simonguest.com'
-        }
       });
 
       window.addEventListener("popstate", () => {

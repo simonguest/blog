@@ -113,11 +113,16 @@ customElements.define(
             );
             if (match) {
               await this.displayArticle(match, event.detail.route.path);
+              if (match.title){
+                  document.title = `${match.title} - simonguest.com`;
+              }
             } else {
               this.displaySummaries(content);
+              document.title = 'simonguest.com';
             }
           } else {
             this.displayNotFound();
+            document.title = 'Page Not Found - simonguest.com';
           }
         },
         false

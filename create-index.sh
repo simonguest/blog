@@ -1,11 +1,13 @@
 #!/bin/bash
 ARTICLES=""
 DIR=./content/live/articles/*.md
+PREFIX=$1
 for FILE in $DIR; do
+  SLUG=`basename $FILE | awk -F. '{print $1}'`
   TITLE=`awk -F"title: " '/title:[\s]*/{ print $2 }' $FILE`
   CREATED=`awk -F"created: " '/created:[\s]*/{ print $2 }' $FILE`
   SYNOPSIS=`awk -F"synopsis: " '/synopsis:[\s]*/{ print $2 }' $FILE`
-  ARTICLES="$ARTICLES$FILE\t$CREATED\t$TITLE\t$SYNOPSIS\n"
+  ARTICLES="$ARTICLES$PREFIX/$SLUG\t$CREATED\t$TITLE\t$SYNOPSIS\n"
 done
 
 ## Create the markdown index

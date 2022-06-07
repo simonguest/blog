@@ -1,15 +1,24 @@
 .DEFAULT_TARGET: all
 
-all: clean build
+all: clean build build-articles copy-css copy-lib
 
 build:
-	mkdir -p ./dist
+	mkdir -p ./dist/articles
 	touch ./dist
-	mkdir ./dist/articles
-	cd ./content/live/articles; for f in *.md; do pandoc "$$f" -s -o "../../../dist/articles/$${f%.md}.html" --template=../../../templates/article.html; done
+	cd ./content/live/articles; for f in *.md; do pandoc "$$f" -s -o "../../../dist/articles/$${f%.md}" --template=../../../templates/article.html; done
 
 build-articles:
-	./create-index.sh | pandoc -s -o "./dist/articles.html" --template=./templates/articles.html --metadata title="Articles"
+	./create-index.sh /articles | pandoc -s -o "./dist/index.html" --template=./templates/articles.html --metadata title="Articles"
+	cp ./dist/index.html ./dist/articles/index.html
+
+copy-css:
+	cp -R ./styles ./dist
+
+copy-lib:
+	cp -R ./lib ./dist
 
 clean:
 	rm -rf ./dist
+
+run:
+	cd ./dist; python3 ../server.py

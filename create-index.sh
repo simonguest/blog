@@ -16,9 +16,6 @@ echo -e $ARTICLES | grep . | sort -k2 -n -t$'\t' -r | awk -F"\t" '
   print "::: summary\n## ["$3"]("$1")";
   print "### "$2;
   print $4"\n";
-  print "::: readmore";
-  print "[Read More]("$1")";
-  print ":::\n"
   print ":::\n"
   } '
 

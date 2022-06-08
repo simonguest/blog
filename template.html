@@ -9,7 +9,20 @@
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$ - simonguest.com</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/github.css">
-    <script src="/lib/highlight.pack.js"></script>
+    <script>
+        window.onload = () => {
+            document.querySelectorAll(".header nav a").forEach((child) => {
+                if (window.location.pathname.startsWith(child.getAttribute("href"))){
+                    child.setAttribute("selected","");
+                }
+                if (window.location.pathname === "/"){
+                    if (child.getAttribute("href") === "/articles"){
+                        child.setAttribute("selected","");
+                    }
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +50,7 @@ $else$
 $endif$
 </div>
 <div class="footer">
-    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 </div>
 </body>
 </html>

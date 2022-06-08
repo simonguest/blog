@@ -93,8 +93,11 @@ nav > a[selected] {
   cursor: pointer;
   text-decoration: none;
   user-select: none;
-  color: var(--primary-color);
   margin: 0;
+}
+
+.summary > h2 > a {
+  color: var(--primary-color);
 }
 
 .summary > h3 {
@@ -120,6 +123,9 @@ nav > a[selected] {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.readmore > p > a {
   color: var(--secondary-color);
 }
 

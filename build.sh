@@ -25,19 +25,19 @@ rm -rf ./dist
 
 echo "Building content"
 mkdir -p ./dist/articles; mkdir -p ./dist/presentations; mkdir -p ./dist/projects
-for f in ./content/live/articles/*.md; do pandoc "$f" -s -o "./dist/articles/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="articles"; done
-for f in ./content/live/presentations/*.md; do pandoc "$f" -s -o "./dist/presentations/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="presentations"; done
-for f in ./content/live/projects/*.md; do pandoc "$f" -s -o "./dist/projects/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="projects"; done
-pandoc "./content/live/about.md" -s -o "./dist/about" --template=./template.html -t html -M article="true"
+for f in ./content/articles/*.md; do pandoc "$f" -s -o "./dist/articles/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="articles"; done
+for f in ./content/presentations/*.md; do pandoc "$f" -s -o "./dist/presentations/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="presentations"; done
+for f in ./content/projects/*.md; do pandoc "$f" -s -o "./dist/projects/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="projects"; done
+pandoc "./content/about.md" -s -o "./dist/about" --template=./template.html -t html -M article="true"
 
 echo "Building indexes"
-create_index ./content/live/articles /articles | pandoc -s -o "./dist/index.html" --template=./template.html -M title="Home"
-create_index ./content/live/articles /articles | pandoc -s -o "./dist/articles/index.html" --template=./template.html -M title="Articles"
-create_index ./content/live/presentations /presentations | pandoc -s -o "./dist/presentations/index.html" --template=./template.html -M title="Presentations"
-create_index ./content/live/projects /projects | pandoc -s -o "./dist/projects/index.html" --template=./template.html -M title="Projects"
+create_index ./content/articles /articles | pandoc -s -o "./dist/index.html" --template=./template.html -M title="Home"
+create_index ./content/articles /articles | pandoc -s -o "./dist/articles/index.html" --template=./template.html -M title="Articles"
+create_index ./content/presentations /presentations | pandoc -s -o "./dist/presentations/index.html" --template=./template.html -M title="Presentations"
+create_index ./content/projects /projects | pandoc -s -o "./dist/projects/index.html" --template=./template.html -M title="Projects"
 
 echo "Copying CSS"
 cp -R *.css ./dist
 
 echo "Copying images"
-cp -R ./content/live/images ./dist
+cp -R ./content/images ./dist

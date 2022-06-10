@@ -1,4 +1,5 @@
 ---
+title: About Simon
 ---
 Simon Guest is the CTO at [Code.org](https://code.org), supporting the mission to ensure every student in every school has the opportunity to learn computer science.
 

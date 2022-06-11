@@ -16,6 +16,7 @@
   "scripts": {
     "build": "./build.sh",
     "server": "npx nodemon",
+    "predeploy": "npm run build",
     "deploy": "npx cdk deploy --app cdk-deploy.js --require-approval never",
     "undeploy": "npx cdk destroy --app cdk-deploy.js"
   },

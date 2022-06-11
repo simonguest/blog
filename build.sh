@@ -24,11 +24,11 @@ echo "Removing dist folder"
 rm -rf ./dist
 
 echo "Building content"
-mkdir -p ./dist/articles; mkdir -p ./dist/presentations; mkdir -p ./dist/projects
-for f in ./content/articles/*.md; do pandoc "$f" -s -o "./dist/articles/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="articles"; done
-for f in ./content/presentations/*.md; do pandoc "$f" -s -o "./dist/presentations/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="presentations"; done
-for f in ./content/projects/*.md; do pandoc "$f" -s -o "./dist/projects/`basename ${f%.md}`" -t html --template=./template.html -M article="true" -M parent="projects"; done
-pandoc "./content/about.md" -s -o "./dist/about" --template=./template.html -t html -M article="true"
+mkdir -p ./dist/articles; mkdir -p ./dist/presentations; mkdir -p ./dist/projects; mkdir -p ./dist/about
+for f in ./content/articles/*.md; do mkdir "./dist/articles/`basename ${f%.md}`"; pandoc "$f" -s -o "./dist/articles/`basename ${f%.md}`/index.html" --template=./template.html -M article="true" -M parent="articles"; done
+for f in ./content/presentations/*.md; do mkdir "./dist/presentations/`basename ${f%.md}`"; pandoc "$f" -s -o "./dist/presentations/`basename ${f%.md}`/index.html" --template=./template.html -M article="true" -M parent="presentations"; done
+for f in ./content/projects/*.md; do mkdir "./dist/projects/`basename ${f%.md}`"; pandoc "$f" -s -o "./dist/projects/`basename ${f%.md}`/index.html" --template=./template.html -M article="true" -M parent="projects"; done
+pandoc "./content/about.md" -s -o "./dist/about/index.html" --template=./template.html -M article="true"
 
 echo "Building indexes"
 create_index ./content/articles /articles | pandoc -s -o "./dist/index.html" --template=./template.html -M title="Home"

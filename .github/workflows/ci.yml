@@ -13,8 +13,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Pandoc
-        uses: docker://pandoc/core:2.18
+      - run: sudo apt-get install -y pandoc
       - run: npm install
       - run: npm run deploy
         env:

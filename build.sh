@@ -1,3 +1,4 @@
+#!/bin/bash
 function create_index() {
   ARTICLES=""
   DIR=$1/*.md

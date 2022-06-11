@@ -24,7 +24,7 @@ html {
 }
 
 @media (max-width: 50rem) {
-  blog-header {
+  .header {
     flex-direction: column;
   }
 
@@ -43,7 +43,7 @@ body {
   box-sizing: border-box;
 }
 
-blog-header {
+.header {
   display: flex;
 }
 
@@ -58,7 +58,7 @@ blog-header {
   text-decoration: none;
 }
 
-nav > blog-link {
+nav > a {
   font-family: "Open Sans Condensed", sans-serif;
   cursor: pointer;
   font-size: 1.4rem;
@@ -68,21 +68,17 @@ nav > blog-link {
   padding-left: 0.3rem;
 }
 
-nav > blog-link[selected] {
+nav > a[selected] {
   text-decoration: underline;
 }
 
-blog-router {
-  flex-grow: 1;
-}
-
-blog-content {
+.content {
   display: flex;
   flex-flow: column;
   flex-grow: 1;
 }
 
-blog-summary {
+.summary {
   padding: 0.5rem;
   border-top: 0.3rem solid var(--tertiary-color);
   height: auto;
@@ -90,17 +86,21 @@ blog-summary {
   margin-bottom: 0.5rem;
 }
 
-.summary-title {
+.summary > h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   user-select: none;
+  margin: 0;
+}
+
+.summary > h2 > a {
   color: var(--primary-color);
 }
 
-.summary-date {
+.summary > h3 {
   margin-top: 0.25rem;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1rem;
@@ -108,25 +108,28 @@ blog-summary {
   color: var(--secondary-color)
 }
 
-.updated-date {
-  font-style: italic;
-}
+/*.updated-date {*/
+/*  font-style: italic;*/
+/*}*/
 
-.summary-synopsis {
+.summary > p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
   font-size: 1rem;
 }
 
-.summary-readmore {
+.readmore {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.readmore > p > a {
   color: var(--secondary-color);
 }
 
-blog-article {
+.article {
   padding: 0.5rem;
   border-top: 0.3rem solid var(--tertiary-color);
   height: auto;
@@ -134,7 +137,7 @@ blog-article {
   margin-bottom: 0.5rem;
 }
 
-#article-title {
+.article > h2 {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -142,7 +145,7 @@ blog-article {
   color: var(--primary-color)
 }
 
-#article-date {
+.article > h3{
   margin-top: -1.25rem;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bolder;
@@ -150,24 +153,32 @@ blog-article {
   color: var(--secondary-color)
 }
 
-#article-body {
+.article-body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
   flex: 1;
 }
 
-#article-body > h1 {
+.article-body > h1 {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-#article-body > h2 {
+.article-body > h2 {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
   font-weight: bold;
   font-size: 0.7rem;
 }
 
-#article-body > blockquote {
+.article-body > blockquote {
+  font-style: italic;
+}
+
+.article-body > figure > img {
+  width: 100%;
+}
+
+.article-body > figure > figcaption {
   font-style: italic;
 }
 
@@ -176,7 +187,7 @@ pre {
   max-width: 100%;
 }
 
-#back-button {
+.back-button {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1rem;
   font-weight: bold;
@@ -185,7 +196,7 @@ pre {
   color: var(--secondary-color);
 }
 
-blog-footer {
+.footer {
   border-top: 0.1rem solid #ddd;
   display: flex;
   flex-flow: column;

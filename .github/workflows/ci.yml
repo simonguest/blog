@@ -9,15 +9,12 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
       - name: AWS Deployment
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: Pandoc
+        uses: docker://pandoc/core:2.18
       - run: npm install
       - run: npm run deploy
         env:

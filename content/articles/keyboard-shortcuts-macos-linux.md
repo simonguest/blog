@@ -1,6 +1,6 @@
 ---
 title: Consistent Keyboard Shortcuts Across macOS and Linux
-created: 4/3/2022
+created: 04/03/2022
 synopsis: I frequently switch between a Mac and a Linux machine for writing code. When doing so, it can be challenge remembering the keyboard shortcuts unique to each environment, including nuances for different applications. In this article, I share a strategy for setting up consistent keyboard shortcuts that work well between the two.
 ---
 

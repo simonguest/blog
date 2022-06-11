@@ -1,6 +1,6 @@
 ---
 title: Writing Better Technical Documents
-created: 1/1/2022
+created: 01/01/2022
 synopsis: In this article, I share five concepts that have helped me write better technical documents. I explore telling a story, maintaining a consistent style, striving for clarity, using feedback loops, and practicing every day.
 ---
 Since joining Code.org, several folks have asked me what habits at Amazon I plan to bring across to my new role here. While Amazon has many [peculiar](https://www.linkedin.com/pulse/becoming-peculiar-amazonian-way-kvon-tucker-m-s-i-o/) qualities, the one I valued most was the culture of writing. As you've likely heard, Amazon values writing and using documents for decision making over creating slide decks.

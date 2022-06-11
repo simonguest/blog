@@ -1,11 +1,7 @@
 const express = require("express");
 const app = express();
-const path = require("path");
 const PORT = 8000;
 
-app.get("/*(.js|.css|.md|.jpg|.png)", express.static("./dist"));
-app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/dist/index.html"));
-});
+app.get("/*", express.static("./dist"));
 console.log(`Server now listening on port ${PORT}`);
 server = app.listen(PORT);

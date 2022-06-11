@@ -9,7 +9,7 @@ class BlogCdkStack extends cdk.Stack {
         super(scope, id, props);
 
         const bucket = new s3.Bucket(this, "simonguest.com", {
-            versioned: true,
+            versioned: false,
             bucketName: "simonguest.com",
             websiteIndexDocument: "index.html",
             websiteErrorDocument: "index.html",
@@ -26,8 +26,8 @@ class BlogCdkStack extends cdk.Stack {
         const distribution = new cloudfront.CloudFrontWebDistribution(this, "CDKCRAStaticDistribution", {
             originConfigs: [
                 {
-                    s3OriginSource: {
-                        s3BucketSource: bucket
+                    customOriginSource: {
+                        domainName: "simonguest.com.s3-website-us-west-2.amazonaws.com"
                     },
                     behaviors: [{isDefaultBehavior: true}],
                 },

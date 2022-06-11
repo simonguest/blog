@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The blog of Simon Guest, CTO of Code.org.">
+    <meta name="author" content="Simon Guest">
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$ - simonguest.com</title>
+    <link rel="stylesheet" href="/main.css">
+    <script>
+        window.onload = () => {
+            document.querySelectorAll(".header nav a").forEach((child) => {
+                if (window.location.pathname.startsWith(child.getAttribute("href"))){
+                    child.setAttribute("selected","");
+                }
+                if (window.location.pathname === "/"){
+                    if (child.getAttribute("href") === "/articles"){
+                        child.setAttribute("selected","");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <a href="/" id="title">Simon Guest</a>
+    <nav>
+        <a href="/articles">Articles</a>
+        <a href="/presentations">Presentations</a>
+        <a href="/projects">Projects</a>
+        <a href="/about">About</a>
+    </nav>
+</div>
+<div class="content">
+$if(article)$
+    <div class="article">
+        <h2>$pagetitle$</h2>
+        <h3>$created$ <span class="updated-date">$updated$<span></h3>
+        <div class="article-body">$body$</div>
+        $if(parent)$
+            <a class="back-button" tabindex="0" href="../$index$">Back to $parent$...</a>
+        $endif$
+    </div>
+$else$
+    $body$
+$endif$
+</div>
+<div class="footer">
+    This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</div>
+</body>
+</html>

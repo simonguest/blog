@@ -2,7 +2,6 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "blog",
-  "dependencies": {},
   "devDependencies": {
     "@aws-cdk/aws-certificatemanager": "^1.137.0",
     "@aws-cdk/aws-cloudfront": "^1.136.0",
@@ -10,19 +9,12 @@
     "@aws-cdk/aws-s3-deployment": "^1.136.0",
     "@aws-cdk/core": "^1.136.0",
     "aws-cdk": "^2.2.0",
-    "cypress": "^9.1.0",
     "express": "^4.17.1",
-    "http-server": "^0.12.3",
-    "nodemon": "^2.0.15",
-    "parcel": "^2.2.1",
-    "parcel-reporter-static-files-copy": "^1.3.2"
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.15"
   },
   "scripts": {
-    "test": "npx cypress run",
-    "generate": "node generate.js",
-    "prebuild": "npm run generate",
-    "build": "npx parcel build index.html",
-    "preserver": "npm run build",
+    "build": "./build.sh",
     "server": "npx nodemon",
     "predeploy": "npm run build",
     "deploy": "npx cdk deploy --app cdk-deploy.js --require-approval never",
@@ -32,13 +24,11 @@
     "type": "git",
     "url": "git+https://github.com/simonguest/blog.git"
   },
-  "staticFiles": {
-    "staticPath": "content",
-    "staticOutPath": "content"
-  },
   "nodemonConfig": {
-    "ext": "js,css,html,md",
-    "ignore": ["dist/", ".parcel-cache/", "content/live/index.js", "content/test/index.js"],
+    "ext": "js,css,html,md,sh",
+    "ignore": [
+      "dist/"
+    ],
     "verbose": true,
     "exec": "npm run build && node server.js"
   },

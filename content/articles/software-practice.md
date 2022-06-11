@@ -1,7 +1,7 @@
 ---
 title: Why Don't Software Developers Practice?
-created: 5/28/2022
-updated: 5/29/2022
+created: 05/28/2022
+updated: 05/29/2022
 synopsis: Many professions, such as athletes and musicians, incorporate practice into their daily routines, but software development is an exception to the rule. In this article, I explore why this is concerning and offer five steps for introducing practice into the profession.
 ---
 Many professions incorporate practice into their daily routines. Athletes wake up early to practice regularly. Successful musicians often have a strict routine of practice. And many artists will dedicate time to practicing new techniques they then incorporate into their work.

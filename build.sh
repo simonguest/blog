@@ -12,7 +12,7 @@ function create_index() {
   done
 
   ## Create the markdown index
-  echo $ARTICLES | grep . | sort -t$'\t' -k2.7,2.10n -k2.1,2.2n -k2.4,2.5n | tac | awk -F"\t" '
+  echo -e $ARTICLES | grep . | sort -t$'\t' -k2.7,2.10n -k2.1,2.2n -k2.4,2.5n | tac | awk -F"\t" '
     {
     print "::: summary\n## ["$3"]("$1")";
     print "### "$2;

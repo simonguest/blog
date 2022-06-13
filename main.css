@@ -80,37 +80,34 @@ nav > a[selected] {
 
 .summary {
   padding: 0.5rem;
-  border-top: 0.3rem solid var(--tertiary-color);
+  border-top: 0.2rem solid var(--tertiary-color);
   height: auto;
   overflow: hidden;
   margin-bottom: 0.5rem;
 }
 
 .summary > h2 {
+  margin-top: 0.25rem;
+}
+
+.summary > h2 > a {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   user-select: none;
-  margin: 0;
-}
-
-.summary > h2 > a {
   color: var(--primary-color);
 }
 
 .summary > h3 {
   margin-top: 0.25rem;
+  margin-bottom: auto;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1rem;
   font-weight: bolder;
   color: var(--secondary-color)
 }
-
-/*.updated-date {*/
-/*  font-style: italic;*/
-/*}*/
 
 .summary > p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
@@ -131,7 +128,7 @@ nav > a[selected] {
 
 .article {
   padding: 0.5rem;
-  border-top: 0.3rem solid var(--tertiary-color);
+  border-top: 0.2rem solid var(--tertiary-color);
   height: auto;
   overflow: hidden;
   margin-bottom: 0.5rem;

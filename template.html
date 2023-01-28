@@ -38,7 +38,9 @@
 $if(article)$
     <div class="article">
         <h2>$pagetitle$</h2>
-        <h3>$created$ <span class="updated-date">$if(updated)$(Updated: $updated$)$endif$</span></h3>
+        $if(created)$
+            <h3>$created$ <span class="updated-date">$if(updated)$(Updated: $updated$)$endif$</span></h3>
+        $endif$
         <div class="article-body">$body$</div>
         $if(parent)$
             <a class="back-button" tabindex="0" href="../$index$">Back to $parent$...</a>

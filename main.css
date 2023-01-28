@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Open+Sans+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 
 :root {
@@ -110,8 +111,9 @@ nav > a[selected] {
 }
 
 .summary > p {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
-  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.4rem;
 }
 
 .readmore {
@@ -151,20 +153,22 @@ nav > a[selected] {
 }
 
 .article-body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.4rem;
   flex: 1;
 }
 
 .article-body > h1 {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 20px;
 }
 
 .article-body > h2 {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;  font-size: 1.0rem;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 18px;
 }
 
 .article-body > blockquote {
@@ -186,7 +190,7 @@ pre {
 
 .back-button {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;

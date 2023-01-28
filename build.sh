@@ -9,17 +9,29 @@ function create_index() {
     READING_LENGTH=`cat $FILE | wc -w | awk {'printf "%.0f\n",$1/200'}`
     CREATED=`awk -F"created: " '/created:[\s]*/{ print $2 }' $FILE`
     SYNOPSIS=`awk -F"synopsis: " '/synopsis:[\s]*/{ print $2 }' $FILE`
-    ARTICLES="$ARTICLES$PREFIX/$SLUG\t$CREATED\t$TITLE\t$SYNOPSIS\t$READING_LENGTH\n"
+    IMAGE=`awk -F"image: " '/image:[\s]*/{ print $2 }' $FILE`
+    ARTICLES="$ARTICLES$PREFIX/$SLUG\t$CREATED\t$TITLE\t$SYNOPSIS\t$READING_LENGTH\t$IMAGE\n"
   done
 
   ## Create the markdown index
-  echo -e $ARTICLES | grep . | sort -t$'\t' -k2.7,2.10n -k2.1,2.2n -k2.4,2.5n | tac | awk -F"\t" '
-    {
-    print "::: summary\n## ["$3"]("$1")";
-    print $4"\n";
-    print "### "$2" · "$5" min read";
-    print ":::\n"
-    } '
+  if [ -z $IMAGE ]; then
+    echo -e $ARTICLES | grep . | sort -t$'\t' -k2.7,2.10n -k2.1,2.2n -k2.4,2.5n | tac | awk -F"\t" '
+      {
+      print "::: summary\n## ["$3"]("$1")";
+      print $4"\n";
+      print "### "$2" · "$5" min read";
+      print ":::\n"
+      } '
+  else
+    echo -e $ARTICLES | grep . | sort -t$'\t' -k2.7,2.10n -k2.1,2.2n -k2.4,2.5n | tac | awk -F"\t" '
+      {
+      print "::: summary\n## ["$3"]("$1")";
+      print "::: summary-image\n[![]("$6")]("$1")\n:::\n";
+      print $4"\n";
+      print "### "$2" · "$5" min read";
+      print ":::\n"
+      } '
+  fi  
 }
 
 echo "Removing dist folder"

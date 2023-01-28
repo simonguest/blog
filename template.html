@@ -22,6 +22,7 @@
             });
         }
     </script>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ek47oeboss084k1"></script>
 </head>
 
 <body>
@@ -40,6 +41,14 @@ $if(article)$
         <h2>$pagetitle$</h2>
         $if(created)$
             <h3>$created$ <span class="updated-date">$if(updated)$(Updated: $updated$)$endif$</span></h3>
+        $endif$
+        $if(presentation)$
+        <a
+            href="$presentation$"
+            class="dropbox-embed"
+            data-height="480px"
+            data-width="100%"
+        ></a>
         $endif$
         <div class="article-body">$body$</div>
         $if(parent)$

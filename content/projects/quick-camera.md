@@ -1,5 +1,6 @@
 ---
 title: Quick Camera
+created: 01/01/2013
 synopsis: Quick Camera is a macOS utility to display, mirror, and rotate the output from any supported USB web camera. You can use Quick Camera for video conferences or presentations where you need to show an external device to your audience.
 ---
 I developed Quick Camera in 2013 for a presentation on mobile application development. For my presentation (pre-pandemic to a live audience), I needed to display the screen of an actual iPhone using an external camera. I found that Photo Booth and other similar apps would mirror the display (with no easy way of reverting). To solve for this, I developed Quick Camera. My goal was to create a high-performing utility, free of clutter, supporting USB camera pass-through and basic video transformations.
